@@ -1,0 +1,182 @@
+
+
+body { 
+    font-family: Arial, sans-serif; 
+}
+.form-container { 
+    max-width: 600px; 
+    margin: auto; 
+    padding: 20px; 
+}
+label { 
+    display: block; 
+    margin-top: 10px; 
+}
+
+input, textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    border:none; 
+    box-shadow: rgba(52, 112, 201, 0.486) 2px 2px 2px 2px;}
+button { 
+    margin-top: 20px;
+     }
+
+
+/* Styles for the drop cap */
+.medieval-text::first-letter {
+    float: left;  /* Positions the letter to the left of the following text */
+    font-size: 3em;  /* Makes the letter 3 times larger than the normal text */
+    line-height: 0.8;  /* Reduces the line height to pull up the letter */
+    padding-top: 4px;  /* Fine-tunes the vertical position */
+    padding-right: 8px;  /* Adds space between the drop cap and the text */
+    padding-left: 3px;  /* Adds a little space on the left side */
+    font-family: "Times New Roman", serif;  /* Uses a serif font for traditional look */
+    font-weight: bold;  /* Makes the letter thicker */
+    color: #8B4513;  /* Applies a rich brown color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Adds a subtle shadow for depth */
+  }
+  
+  /* Styles for the rest of the text */
+  .medieval-text {
+    
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Customization options */
+  
+  /* 1. For a more ornate drop cap */
+  .medieval-text.ornate::first-letter {
+    font-family: "Old English Text MT", "Lucida Calligraphy", cursive;
+    color: #B8860B;  /* Dark golden color */
+    font-size: 4em;
+    border: 2px solid #B8860B;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #FFF8DC;  /* Light cream background */
+  }
+  
+  /* 2. For a medieval-style paragraph */
+  .medieval-text.parchment {
+    background-color: #F4E9C9;  /* Light parchment color */
+    border: 1px solid #D2B48C;
+    padding: 20px;
+    font-family: "Goudy Old Style", Garamond, serif;
+    color: #5C4033;  /* Dark brown text */
+  }
+  
+  /* 3. For a Celtic-inspired drop cap */
+  .medieval-text.celtic::first-letter {
+    font-family: "Uncial Antiqua", "Irish Uncial", fantasy;
+    color: #006400;  /* Dark green */
+    font-size: 3.5em;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #98FB98, #228B22);
+    padding: 5px 10px;
+    margin-right: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+.flowery-text::first-letter {
+  float: left;
+  font-size: 5em;
+  line-height: 0.8;
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-family: 'Birthstone', cursive;
+  font-weight: normal;
+  color: #8B4513;
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.3);
+  transform: rotate(-5deg) skew(-5deg);
+  background: 
+    linear-gradient(to bottom right, #FFD700, #FFA500);
+ 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid #8B4513;
+  border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+  position: relative;
+}
+
+.flowery-text::first-letter::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: 
+    radial-gradient(circle at top left, #FF69B4 10%, transparent 11%),
+    radial-gradient(circle at top right, #FF1493 10%, transparent 11%),
+    radial-gradient(circle at bottom left, #FF69B4 10%, transparent 11%),
+    radial-gradient(circle at bottom right, #FF1493 10%, transparent 11%);
+  background-size: 20px 20px;
+  background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.flowery-text {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+.knight-text::first-letter {
+
+  float: left;
+  font-size: 5em;
+  line-height: 0.8;
+  padding: 10px;
+  margin-right: 10px;
+  font-family: 'UnifrakturMaguntia', cursive;
+  color: #8B4513;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #F4E9C9;
+  border: 2px solid #8B4513;
+  border-radius: 5px;
+  position: relative;
+  
+}
+
+.knight-text::first-letter::before {
+  content: '⚔️';
+  position: absolute;
+  font-size: 0.4em;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.knight-text::first-letter::after {
+    text-align: center;
+  content: '🛡️';
+  position: absolute;
+  font-size: 0.4em;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.knight-text {
+    text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  background-color: #FFF8DC;
+  padding: 20px;
+  border: 1px solid #D2B48C;
+  border-radius: 5px;
+}
